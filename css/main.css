@@ -23,15 +23,94 @@ h1 {
     margin: 0px;
 }
 
+.container {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+}
+
 .title {
-    display: inline-block;
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /* display: inline-block;
     width: auto;
     height: auto;
-    margin-left: 5%;
-    margin-top: 7%;
+    margin-left: 30px;
+    margin-top: 40px;
     transform: rotate(-30deg);
     color: var(--pacheco-B);
+    text-shadow: 5px 5px 3px var(--pacheco-D); */
 }
+
+.title img {
+    width: auto;
+    filter: drop-shadow(5px 5px 2px var(--pacheco-D));
+}
+
+.vid-embed {
+    display: block;
+    position: relative;
+    max-width: 640px;
+    height: auto;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.vid-embed iframe {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 20px 20px 6px var(--pacheco-D);
+}
+
+.nav {
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    top: 40px;
+    right: 20px;
+
+}
+
+.nav-btn {
+    display: inline-block;
+    position: relative;
+    margin: 0px 5px 0px 5px;
+    background-color: var(--pacheco-A);
+    text-align: center;
+    box-shadow: 5px 5px 3px var(--pacheco-D);
+    transform: translate(0px, 0px);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: var(--pacheco-D);
+    cursor: pointer;
+    transform: translate(-2px, -4px);
+    box-shadow: 7px 9px 3px var(--pacheco-D);
+}
+
+.nav-btn:hover {
+    background-color: var(--pacheco-D);
+    cursor: pointer;
+}
+
+.nav-btn i {
+    color: var(--pacheco-B);
+    font-size: 52px;
+    text-align: center;
+    margin: 10px;
+    text-shadow: 2px 0px 1px var(--pacheco-C);
+}
+
 .canv {
     display: block;
     position: fixed;
@@ -55,4 +134,16 @@ h1 {
     mix-blend-mode: overlay;
     pointer-events: none;
 
+}
+
+@media only screen and (max-width: 600px){
+    .title img {
+        width: 80px;
+    }
+
+    .nav {
+        top: 100px;
+        left: 20px;
+        right: auto;
+    }
 }

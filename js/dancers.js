@@ -93,7 +93,7 @@ var Dancer = function(_x, _y, _r, _n, _dir, _col, _type, _ind){
   this.n = _n;
   this.clickType = _type;
   if (!this.clickType){
-    this.rLerped = lerp((width+height)*0.25, (width+height)*0.3, this.r);
+    this.rLerped = lerp((width+height)*0.225, (width+height)*0.275, this.r);
   } else {
     this.rLerped = lerp((width+height)*0.1, (width+height)*0.2, this.r);
   }
@@ -136,8 +136,14 @@ var Dancer = function(_x, _y, _r, _n, _dir, _col, _type, _ind){
     // }
     this.n += this.g;
 
-    if (this.n < 1 || this.n > 10){
-      this.g = -this.g;
+    if (!this.clickType){
+      if (this.n < 1 || this.n > 10){
+        this.g = -this.g;
+      }
+    } else {
+      if (this.n < 3 || this.n > 20){
+        this.g = -this.g;
+      }
     }
     
   };
@@ -170,6 +176,14 @@ var Dancer = function(_x, _y, _r, _n, _dir, _col, _type, _ind){
       this.mult = (this.pos.dist(mouseVec))*0.01;
     } else {
 
+    }
+  };
+
+  this.resize = function(){
+    if (!this.clickType){
+      this.rLerped = lerp((width+height)*0.225, (width+height)*0.275, this.r);
+    } else {
+      this.rLerped = lerp((width+height)*0.1, (width+height)*0.2, this.r);
     }
   };
 };
@@ -226,4 +240,7 @@ function touchStarted(){
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
+  for (i=0;i<Dancers.length;i++){
+    Dancers[i].resize();
+  }
 }
