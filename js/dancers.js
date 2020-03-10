@@ -89,7 +89,8 @@ var Dancer = function(_x, _y, _r, _n, _dir, _col, _type, _ind){
   this.pos = new p5.Vector(_x, _y);
   this.dir = _dir.normalize();
   this.mult = 1;
-  this.r = _r;
+  this.rMax = _r;
+  this.r = 0;
   this.n = _n;
   this.clickType = _type;
   if (!this.clickType){
@@ -135,6 +136,17 @@ var Dancer = function(_x, _y, _r, _n, _dir, _col, _type, _ind){
     //   this.r += this.dir.y*0.3;
     // }
     this.n += this.g;
+
+    if (this.n < 3){
+      this.r = lerp(0, this.rMax, this.n-2);
+    } else {
+      if (this.r < this.rMax){
+        this.r += 0.5;
+      } else {
+        this.r = this.rMax;
+      }
+      
+    }
 
     if (!this.clickType){
       if (this.n < 1 || this.n > 10){
