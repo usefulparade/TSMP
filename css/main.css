@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Caladea:400,400i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Inter:100,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=IBM+Plex+Serif&display=swap');
 
 :root {
     --color-A: rgb(255, 218, 189);
@@ -16,7 +18,14 @@ body {
 }
 
 h1 {
-    font-family: "Inter";
+    font-family: "IBM Plex Serif";
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0px;
+}
+
+h2 {
+    font-family: "IBM Plex Sans";
     font-size: 2rem;
     font-weight: 400;
     margin: 0px;
@@ -41,17 +50,18 @@ h1 {
     top: 0px;
     left: 0px;
     transform: rotate(0deg);
+    z-index: 1000;
 }
 
 .title img {
     width: auto;
-    filter: drop-shadow(5px 5px 2px var(--pacheco-D));
+    /* filter: drop-shadow(5px 5px 2px var(--pacheco-D)); */
 }
 
 .big-text {
     display: block;
     position: relative;
-    width: 50%;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
@@ -59,15 +69,15 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     color: var(--pacheco-B);
-    background-color: var(--pacheco-A);
-    text-shadow: 2px 0px 1px var(--pacheco-C); 
-    box-shadow: 12px 12px 6px var(--pacheco-D);
+    /* background-color: var(--pacheco-D); */
+    /* text-shadow: 2px 0px 1px var(--pacheco-C);  */
+    /* box-shadow: 12px 12px 6px var(--pacheco-D); */
 }
 
 .vid-embed {
     display: block;
     position: relative;
-    max-width: 640px;
+    max-width: 800px;
     height: auto;
     margin-top: 200px;
     margin-left: auto;
@@ -78,7 +88,7 @@ h1 {
 .vid-embed iframe {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 12px 12px 6px var(--pacheco-D);
+    /* box-shadow: 12px 12px 6px var(--pacheco-D); */
 }
 
 .nav {
@@ -103,7 +113,7 @@ h1 {
     margin: 0px 5px 0px 5px;
     background-color: var(--pacheco-A);
     text-align: center;
-    box-shadow: 5px 5px 2px var(--pacheco-D);
+    /* box-shadow: 5px 5px 2px var(--pacheco-D); */
     transform: translate(0px, 0px);
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -112,7 +122,7 @@ h1 {
     background-color: var(--pacheco-D);
     cursor: pointer;
     transform: translate(-2px, -4px);
-    box-shadow: 7px 9px 3px var(--pacheco-D);
+    /* box-shadow: 7px 9px 3px var(--pacheco-D); */
 }
 
 .nav-btn i {
@@ -120,7 +130,7 @@ h1 {
     font-size: 52px;
     text-align: center;
     margin: 10px;
-    text-shadow: 2px 0px 1px var(--pacheco-C);
+    /* text-shadow: 2px 0px 1px var(--pacheco-C); */
 }
 
 .social {
@@ -151,7 +161,7 @@ h1 {
     background-color: var(--pacheco-A);
     text-align: center;
     border-radius: 24px;
-    box-shadow: 3px 3px 1px var(--pacheco-D);
+    /* box-shadow: 3px 3px 1px var(--pacheco-D); */
     transform: translate(0px, 0px);
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -160,7 +170,7 @@ h1 {
     background-color: var(--pacheco-D);
     cursor: pointer;
     transform: translate(-2px, -4px);
-    box-shadow: 5px 7px 2px var(--pacheco-D);
+    /* box-shadow: 5px 7px 2px var(--pacheco-D); */
     
 }
 
@@ -170,7 +180,7 @@ h1 {
     width: 24px;
     text-align: center;
     margin: 10px;
-    text-shadow: 2px 0px 1px var(--pacheco-C);
+    /* text-shadow: 2px 0px 1px var(--pacheco-C); */
 }
 
 .canv {
@@ -191,7 +201,7 @@ h1 {
     z-index: 100;
     background-image: url("../img/paperbag.jpg");
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.4;
     filter: saturate(0.5);
     mix-blend-mode: overlay;
     pointer-events: none;
@@ -208,7 +218,7 @@ h1 {
         /* padding: 0% 10% 0% 10%; */
     }
 
-    .big-text h1 {
+    .big-text h2 {
         font-size: 1.5rem;
     }
 
